@@ -1,0 +1,27 @@
+.footer {
+  @include flex-column-center;
+
+  width: 100vw;
+  height: 209px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  background-color: #000000;
+  color: #ffffff;
+  &__container {
+    @include flex-column-center;
+  }
+  &__logo {
+    @include flex-center;
+    img {
+      width: 122px;
+      height: auto;
+    }
+  }
+  &__text {
+    text-align: center;
+    margin-top: 10px;
+    width: 70%;
+  }
+}

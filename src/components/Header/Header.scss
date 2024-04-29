@@ -1,0 +1,17 @@
+.header {
+  width: 100vw;
+  &__container {
+    @include flex-space-between-center;
+    margin: 20px;
+  }
+  &__logo {
+    img {
+      width: 145px;
+      height: auto;
+    }
+  }
+  &__nav {
+    @include flex-center;
+    gap: 20px;
+  }
+}
