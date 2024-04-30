@@ -1,0 +1,17 @@
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: $card-banner-color;
+  p {
+    padding: 10px;
+    font-weight: 700;
+  }
+  img {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+}

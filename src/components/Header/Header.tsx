@@ -11,9 +11,9 @@ export default function Header() {
           <Link to="/" className="header__links">
             Acceuil{" "}
           </Link>
-          <a href="#" className="header__links">
+          <Link to="/about" className="header__links">
             À propos
-          </a>
+          </Link>
         </div>
       </div>
     </header>
