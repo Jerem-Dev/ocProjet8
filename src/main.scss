@@ -1,0 +1,18 @@
+//Reset CSS
+@import "src/styles/reset.scss";
+
+// Global styles
+@import "src/styles/variables.scss";
+@import "src/styles/mixins.scss";
+@import "src/styles/globals.scss";
+@import "src/styles/typography.scss";
+@import "src/styles/keyframes.scss";
+
+// Components styles
+@import "src/components/Header/Header.scss";
+@import "src/components/Footer/Footer.scss";
+@import "src/components/Banner/Banner.scss";
+@import "src/components/GalleryCard/GalleryCard.scss";
+
+//Pages styles
+@import "src/pages/Home/Home.scss";

@@ -1,0 +1,6 @@
+.home {
+  @include flex-column-center;
+  &__housings-list {
+    margin-top: 20px;
+  }
+}
