@@ -1,0 +1,12 @@
+$primary-color: #ff6060;
+$secondary-color: #000000;
+$tertiary-color: #f6f6f6;
+$card-banner-color: #fff;
+
+$card-background-color: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
+  rgba(0, 0, 0, 0.5) 100%
+);
