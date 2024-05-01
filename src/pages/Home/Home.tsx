@@ -35,6 +35,7 @@ export default function Home() {
       <div className="home__housings-list">
         {logements.map((logement) => (
           <GalleryCard
+            key={logement.id}
             title={logement.title}
             imageUrl={logement.cover}
             alt={logement.title}

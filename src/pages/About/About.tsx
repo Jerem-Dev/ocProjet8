@@ -27,8 +27,8 @@ export default function About() {
   return (
     <main className="about">
       <Banner imageUrl="public/img/about-banner.png" />
-      {aboutList.map((item) => (
-        <Dropdown title={item.title}>
+      {aboutList.map((item, index) => (
+        <Dropdown key={item.title + index} title={item.title}>
           <p>{item.content}</p>
         </Dropdown>
       ))}
