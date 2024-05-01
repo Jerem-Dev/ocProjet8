@@ -1,12 +1,46 @@
+import { useEffect, useState } from "react";
 import Banner from "../../components/Banner/Banner";
 import GalleryCard from "../../components/GalleryCard/GalleryCard";
+import logementsData from "../../data/logements.json";
+
+interface Logement {
+  id: string;
+  title: string;
+  cover: string;
+  pictures: string[];
+  description: string;
+  host: {
+    name: string;
+    picture: string;
+  };
+  rating: string;
+  location: string;
+  equipments: string[];
+  tags: string[];
+}
 
 export default function Home() {
+  const [logements, setLogements] = useState([] as Logement[]);
+
+  useEffect(() => {
+    setLogements(logementsData as Logement[]);
+  }, []);
+
   return (
     <main className="home">
-      <Banner />
+      <Banner
+        title="Chez vous, partout et ailleurs"
+        imageUrl="/public/img/home-banner.png"
+      />
       <div className="home__housings-list">
-        <GalleryCard />
+        {logements.map((logement) => (
+          <GalleryCard
+            key={logement.id}
+            title={logement.title}
+            imageUrl={logement.cover}
+            alt={logement.title}
+          />
+        ))}
       </div>
     </main>
   );

@@ -1,17 +1,53 @@
 .dropdown {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
-  border-radius: 5px;
-  background-color: $primary-color;
-  color: $card-banner-color;
-  p {
-    padding: 10px;
-    font-weight: 700;
+  height: auto;
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $card-banner-color;
+    p {
+      padding: 10px;
+      font-weight: 700;
+    }
+    img {
+      width: auto;
+      height: auto;
+      margin: 10px;
+    }
   }
-  img {
-    width: auto;
-    height: auto;
-    margin: 10px;
+  &__content {
+    position: relative;
+    visibility: hidden;
+    border-radius: 0 0 10px 10px;
+    max-height: 0;
+    opacity: 0;
+    z-index: -1;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
   }
+}
+
+.content-open {
+  position: relative;
+  visibility: visible;
+  background-color: $tertiary-color;
+  max-height: 500px;
+  opacity: 1;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+
+.chevron-open {
+  transform: rotate(-180deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.chevron-close {
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out;
 }
