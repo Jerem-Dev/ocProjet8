@@ -7,7 +7,6 @@ interface DropdownProps {
 
 export default function Dropdown(props: DropdownProps) {
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
 
   function handleToggle() {
     setToggle(!toggle);
