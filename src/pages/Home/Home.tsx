@@ -6,7 +6,7 @@ export default function Home() {
     <main className="home">
       <Banner
         title="Chez vous, partout et ailleurs"
-        imageUrl="public/img/home-banner.png"
+        imageUrl="/public/img/home-banner.png"
       />
       <div className="home__housings-list">
         <GalleryCard />
