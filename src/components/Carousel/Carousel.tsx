@@ -23,6 +23,18 @@ export default function Carousel(props: CarouselProps) {
     }
   }
 
+  if (props.imgUrl.length <= 1) {
+    return (
+      <div className="carousel">
+        <img
+          src={props.imgUrl[currentImg]}
+          alt="Photo du logement"
+          className="carousel__slide"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="carousel">
       <img
@@ -42,6 +54,9 @@ export default function Carousel(props: CarouselProps) {
         className="next-img"
         onClick={handleNextImg}
       />
+      <p className="carousel__current-slide">{`${currentImg + 1}/${
+        props.imgUrl.length
+      }`}</p>
     </div>
   );
 }
