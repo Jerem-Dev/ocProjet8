@@ -6,12 +6,12 @@ import TagButton from "../../components/TagButton/Tagbutton";
 
 export default function Housingsheet() {
   const { id } = useParams();
-
   const housing = logements.find((housing) => housing.id === id);
-
   if (!housing) {
     return <p>Logement non trouvé</p>;
   }
+  const ratingRange = [1, 2, 3, 4, 5];
+  const rating = parseInt(housing.rating);
 
   return (
     <main className="housing-sheet">
@@ -25,9 +25,27 @@ export default function Housingsheet() {
           ))}
         </div>
       </div>
-      <div className="housing-sheet__owner-rating"></div>
+      <div className="housing-sheet__owner-rating">
+        <div className="rating">
+          {" "}
+          {ratingRange.map((star) =>
+            rating >= star ? (
+              <img key={star} src="/public/img/redstar.svg" alt="active star" />
+            ) : (
+              <img
+                key={star}
+                src="/public/img/greystar.svg"
+                alt="inactive star"
+              />
+            )
+          )}
+        </div>
+        <div className="owner">
+          <p>{housing.host.name}</p>
+          <img src={housing.host.picture} alt="owner" />
+        </div>
+      </div>
       <div className="housing-sheet__dropdown">
-        {" "}
         <Dropdown title="Description">
           <p>{housing.description}</p>
         </Dropdown>

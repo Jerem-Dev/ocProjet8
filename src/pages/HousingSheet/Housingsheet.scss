@@ -1,7 +1,7 @@
 .housing-sheet {
   @include flex-column-center;
   padding: 20px;
-  gap: 10px;
+  gap: 15px;
   &__header {
     display: flex;
     flex-direction: column;
@@ -22,5 +22,43 @@
   &__tags {
     display: flex;
     gap: 10px;
+  }
+  &__owner-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    .rating img {
+      width: 18px;
+      height: 18px;
+    }
+    .owner {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 135px;
+      text-align: end;
+      gap: 10px;
+      img {
+        background-color: gray;
+        min-width: 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      p {
+        color: $primary-color;
+        font-size: 16px;
+        font-weight: 500;
+        margin: auto;
+      }
+    }
+  }
+  &__dropdown {
+    @include flex-column-center;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 }
