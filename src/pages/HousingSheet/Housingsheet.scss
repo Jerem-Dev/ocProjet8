@@ -1,3 +1,26 @@
 .housing-sheet {
   @include flex-column-center;
+  padding: 20px;
+  gap: 10px;
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 10px;
+    h3 {
+      color: $primary-color;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &__tags {
+    display: flex;
+    gap: 10px;
+  }
 }
