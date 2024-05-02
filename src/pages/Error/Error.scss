@@ -1,0 +1,25 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  .number {
+    font-size: 100px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  .not-found {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $primary-color;
+  }
+  a {
+    width: 80%;
+    text-decoration: underline;
+  }
+}

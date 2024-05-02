@@ -3,12 +3,13 @@ import logements from "../../data/logements.json";
 import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import TagButton from "../../components/TagButton/Tagbutton";
+import Error from "../Error/Error";
 
 export default function Housingsheet() {
   const { id } = useParams();
   const housing = logements.find((housing) => housing.id === id);
   if (!housing) {
-    return <p>Logement non trouvé</p>;
+    return <Error />;
   }
   const ratingRange = [1, 2, 3, 4, 5];
   const rating = parseInt(housing.rating);
