@@ -1,0 +1,40 @@
+.carousel {
+  position: relative;
+  &__slide {
+    width: 90vw;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.prev-img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  bottom: 50%;
+  width: 24px;
+  height: 24px;
+  rotate: -90deg;
+}
+
+.next-img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  bottom: 50%;
+  width: 24px;
+  height: 24px;
+  rotate: 90deg;
+}
+
+.prev-img,
+.next-img {
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+
+  &:hover {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+    transform: scale(1.1);
+  }
+}
