@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
 import logements from "../../data/logements.json";
 
 export default function Housingsheet() {
-  const housing = logements.find((housing) => housing.id === "c67ab8a7");
+  const { id } = useParams();
+
+  const housing = logements.find((housing) => housing.id === id);
   return (
     <main className="housing-sheet">
       <p>Housing</p>
