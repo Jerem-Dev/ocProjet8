@@ -4,7 +4,7 @@ import GalleryCard from "../../components/GalleryCard/GalleryCard";
 import logementsData from "../../data/logements.json";
 import { Link } from "react-router-dom";
 
-interface Logement {
+export interface Logement {
   id: string;
   title: string;
   cover: string;
