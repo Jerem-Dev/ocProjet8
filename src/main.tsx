@@ -6,6 +6,7 @@ import "./main.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
+import Housingsheet from "./pages/HousingSheet/Housingsheet";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/housing/:id" element={<Housingsheet />} />
       </Routes>
       <Footer />
     </Router>
