@@ -43,14 +43,15 @@ export default function Home() {
       />
       <div className="home__housings-list">
         {logements.map((logement) => (
-          <Link key={logement.id} to={`/housing/${logement.id}`}>
-            <GalleryCard
-              key={logement.id}
-              title={logement.title}
-              imageUrl={logement.cover}
-              alt={logement.title}
-            />
-          </Link>
+          // <Link key={logement.id} to={`/housing/${logement.id}`}>
+          <GalleryCard
+            id={logement.id}
+            key={logement.id}
+            title={logement.title}
+            imageUrl={logement.cover}
+            alt={logement.title}
+          />
+          // </Link>
         ))}
       </div>
     </main>

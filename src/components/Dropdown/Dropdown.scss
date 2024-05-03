@@ -1,5 +1,5 @@
 .dropdown {
-  width: 90%;
+  width: 100%;
   height: auto;
   &__btn {
     display: flex;
@@ -29,6 +29,9 @@
     padding: 0 20px;
     overflow: hidden;
     transition: all 0.4s ease;
+    li {
+      line-height: 1.2;
+    }
   }
 }
 

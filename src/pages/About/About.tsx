@@ -27,11 +27,13 @@ export default function About() {
   return (
     <main className="about">
       <Banner imageUrl="/img/about-banner.png" />
-      {aboutList.map((item, index) => (
-        <Dropdown key={item.title + index} title={item.title}>
-          <p>{item.content}</p>
-        </Dropdown>
-      ))}
+      <div className="about__dropdown-container">
+        {aboutList.map((item, index) => (
+          <Dropdown key={item.title + index} title={item.title}>
+            <p>{item.content}</p>
+          </Dropdown>
+        ))}
+      </div>
     </main>
   );
 }

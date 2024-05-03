@@ -10,6 +10,12 @@
     font-size: 100px;
     font-weight: 700;
     color: $primary-color;
+    @media (min-width: 768px) {
+      font-size: 150px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 250px;
+    }
   }
   .not-found {
     width: 80%;
@@ -17,6 +23,12 @@
     font-weight: 500;
     line-height: 1.5;
     color: $primary-color;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 32px;
+    }
   }
   a {
     width: 80%;
