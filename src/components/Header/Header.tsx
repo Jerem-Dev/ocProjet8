@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="header__container">
         <div className="header__logo">
-          <img src="../public/img/LOGO-RED.svg" alt="logo kasa" />
+          <img src="/img/LOGO-RED.svg" alt="logo kasa" />
         </div>
         <div className="header__nav">
           <Link to="/" className="header__links">

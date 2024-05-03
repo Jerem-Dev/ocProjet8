@@ -1,5 +1,4 @@
 .header {
-  width: 100vw;
   &__container {
     @include flex-space-between-center;
     margin: 20px;
@@ -15,6 +14,8 @@
     gap: 20px;
   }
   &__links {
+    text-transform: uppercase;
+    font-size: 12px;
     &:hover {
       text-decoration: underline;
     }

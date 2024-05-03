@@ -38,7 +38,7 @@ export default function Carousel(props: CarouselProps) {
   return (
     <div className="carousel">
       <img
-        src="/public/img/Chevron.svg"
+        src="/img/Chevron.svg"
         alt="Image précedente"
         className="prev-img"
         onClick={handlePrevImg}
@@ -49,7 +49,7 @@ export default function Carousel(props: CarouselProps) {
         className="carousel__slide"
       />
       <img
-        src="/public/img/Chevron.svg"
+        src="/img/Chevron.svg"
         alt="Image suivante"
         className="next-img"
         onClick={handleNextImg}
