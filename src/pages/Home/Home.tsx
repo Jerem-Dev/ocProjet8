@@ -24,6 +24,14 @@ export default function Home() {
   const [logements, setLogements] = useState([] as Logement[]);
 
   useEffect(() => {
+    fetch(
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json"
+    )
+      .then((response) => response.json())
+      .then((data) => setLogements(data));
+  }, []);
+
+  useEffect(() => {
     setLogements(logementsData as Logement[]);
   }, []);
 
@@ -31,7 +39,7 @@ export default function Home() {
     <main className="home">
       <Banner
         title="Chez vous, partout et ailleurs"
-        imageUrl="/public/img/home-banner.png"
+        imageUrl="/img/home-banner.png"
       />
       <div className="home__housings-list">
         {logements.map((logement) => (

@@ -5,13 +5,15 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import TagButton from "../../components/TagButton/Tagbutton";
 import Error from "../Error/Error";
 
+const ratingRange = [1, 2, 3, 4, 5];
+
 export default function Housingsheet() {
   const { id } = useParams();
   const housing = logements.find((housing) => housing.id === id);
+  // useMemo
   if (!housing) {
     return <Error />;
   }
-  const ratingRange = [1, 2, 3, 4, 5];
   const rating = parseInt(housing.rating);
 
   return (
@@ -28,16 +30,11 @@ export default function Housingsheet() {
       </div>
       <div className="housing-sheet__owner-rating">
         <div className="rating">
-          {" "}
           {ratingRange.map((star) =>
             rating >= star ? (
-              <img key={star} src="/public/img/redstar.svg" alt="active star" />
+              <img key={star} src="/img/redstar.svg" alt="active star" />
             ) : (
-              <img
-                key={star}
-                src="/public/img/greystar.svg"
-                alt="inactive star"
-              />
+              <img key={star} src="/img/greystar.svg" alt="inactive star" />
             )
           )}
         </div>
