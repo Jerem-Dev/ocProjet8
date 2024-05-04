@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Banner from "../../components/Banner/Banner";
 import GalleryCard from "../../components/GalleryCard/GalleryCard";
 import logementsData from "../../data/logements.json";
-import { Link } from "react-router-dom";
 
 export interface Logement {
   id: string;
@@ -43,7 +42,6 @@ export default function Home() {
       />
       <div className="home__housings-list">
         {logements.map((logement) => (
-          // <Link key={logement.id} to={`/housing/${logement.id}`}>
           <GalleryCard
             id={logement.id}
             key={logement.id}
@@ -51,7 +49,6 @@ export default function Home() {
             imageUrl={logement.cover}
             alt={logement.title}
           />
-          // </Link>
         ))}
       </div>
     </main>
