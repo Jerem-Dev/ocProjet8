@@ -2,7 +2,7 @@ import { useState } from "react";
 
 interface DropdownProps {
   title: string;
-  children?: React.ReactNode | string;
+  children: React.ReactNode | string;
 }
 
 export default function Dropdown(props: DropdownProps) {
