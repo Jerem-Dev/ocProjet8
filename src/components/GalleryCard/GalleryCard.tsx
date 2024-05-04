@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 interface GalleryCardProps {
-  title?: string;
+  title: string;
   imageUrl: string;
-  alt?: string;
+  alt: string;
   id: string;
 }
 
