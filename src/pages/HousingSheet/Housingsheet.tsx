@@ -4,17 +4,20 @@ import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import TagButton from "../../components/TagButton/Tagbutton";
 import Error from "../Error/Error";
+import { useMemo } from "react";
 
 const ratingRange = [1, 2, 3, 4, 5];
 
 export default function Housingsheet() {
   const { id } = useParams();
-  const housing = logements.find((housing) => housing.id === id);
-  // useMemo
+  const housing = useMemo(
+    () => logements.find((housing) => housing.id === id),
+    [id]
+  );
   if (!housing) {
     return <Error />;
   }
-  const rating = parseInt(housing.rating);
+  const rating = useMemo(() => parseInt(housing.rating), [housing]);
 
   return (
     <main className="housing-sheet">

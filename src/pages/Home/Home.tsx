@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Banner from "../../components/Banner/Banner";
 import GalleryCard from "../../components/GalleryCard/GalleryCard";
 import logementsData from "../../data/logements.json";
-import { Link } from "react-router-dom";
 
 export interface Logement {
   id: string;
@@ -23,13 +22,14 @@ export interface Logement {
 export default function Home() {
   const [logements, setLogements] = useState([] as Logement[]);
 
-  useEffect(() => {
-    fetch(
-      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json"
-    )
-      .then((response) => response.json())
-      .then((data) => setLogements(data));
-  }, []);
+  //CORS ERROR
+  // useEffect(() => {
+  //   fetch(
+  //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => setLogements(data));
+  // }, []);
 
   useEffect(() => {
     setLogements(logementsData as Logement[]);
@@ -43,7 +43,6 @@ export default function Home() {
       />
       <div className="home__housings-list">
         {logements.map((logement) => (
-          // <Link key={logement.id} to={`/housing/${logement.id}`}>
           <GalleryCard
             id={logement.id}
             key={logement.id}
@@ -51,7 +50,6 @@ export default function Home() {
             imageUrl={logement.cover}
             alt={logement.title}
           />
-          // </Link>
         ))}
       </div>
     </main>
